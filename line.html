@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Line Graph Starter</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    <script type="text/javascript">
+
+        function plotLine(data) {
+            global = data;
+
+            plot();
+        }
+
+        function plot() {
+            console.log(global);
+
+            Highcharts.chart('container', {
+                title: {
+                    text: 'Solar Employment Growth by Sector, 2010-2016'
+                },
+
+                subtitle: {
+                    text: 'Source: thesolarfoundation.com'
+                },
+
+                yAxis: {
+                    title: {
+                        text: 'Number of Employees'
+                    }
+                },
+
+                xAxis: {
+                    accessibility: {
+                        rangeDescription: 'Range: 2010 to 2017'
+                    }
+                },
+
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle'
+                },
+
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false
+                        },
+                        pointStart: 1
+                    }
+                },
+
+                series: global['data'],
+
+                responsive: {
+                    rules: [{
+                        condition: {
+                            maxWidth: 500
+                        },
+                        chartOptions: {
+                            legend: {
+                                layout: 'horizontal',
+                                align: 'center',
+                                verticalAlign: 'bottom'
+                            }
+                        }
+                    }]
+                }
+            });
+        }
+
+        async function loadJSON(path) {
+            let response = await fetch(path);
+            let dataset = await response.json();
+            return dataset;
+        }
+
+        function init() {
+            dataPromise = loadJSON('./data/data.json');
+            dataPromise.then(function (data) {
+                plotLine(data);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', init, false);
+
+    </script>
+</head>
+
+<body>
+
+    <div id="container" style="min-width: 500px; height: 600px; margin: 0 auto"></div>
+
+</body>
+
+</html>

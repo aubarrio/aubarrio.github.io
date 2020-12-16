@@ -1,0 +1,61 @@
+/* * {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60em;
+} */
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 60%;
+}
+
+h2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+hr {
+    margin: auto;
+    width: 60%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+h3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    font-size: 14pt;
+}
+
+div#container {
+    margin: auto;
+    width: 60%;
+    height: 400;
+}
+
+div#container2 {
+    margin: auto;
+    width: 60%;
+    height: 700px;
+}
+
+div#container3 {
+    margin: auto;
+    width: 60%;
+    height: 400;
+}
