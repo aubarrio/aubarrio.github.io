@@ -2,42 +2,42 @@
 function simplePlot() {
     Highcharts.chart('container', {
         chart: {
-			type: 'pie'
-		},
-		title: {
-			text: 'Comparison of Wins: Top Six Teams vs. Rest of Teams'
-		},
-		plotOptions: {
-			pie: {
-				allowPointSelect: true,
-				cursor: 'pointer',
-				dataLabels: {
-					enabled: true,
-					format: '<b>{point.name}</b>:<br>{point.percentage:.1f} %<br>Wins: {point.y}'
-				},
-				showInLegend: true
-			}
-		},
-		legend: {
-			borderWidth: 1,
-			borderColor: '#cccccc',
-			layout: 'vertical',
-			align: 'center',
-			verticalAlign: 'top'
-		},
-		series: [{
-			name: 'Wins',
-			data: [{
-				name: 'Top Six',
-				y: 129,
-				color: '#ffcccb',
-				legendIndex: 1
-			}, {
-				name: 'Rest of Teams',
-				y: 158,
-				color: '#add8e6',
-			}]
-		}]
+            type: 'pie'
+        },
+        title: {
+            text: 'Comparison of Wins: Top Six Teams vs. Rest of Teams<br>2014-15 Premier League Season'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>:<br>{point.percentage:.1f} %<br>Wins: {point.y}'
+                },
+                showInLegend: true
+            }
+        },
+        legend: {
+            borderWidth: 1,
+            borderColor: '#cccccc',
+            layout: 'vertical',
+            align: 'center',
+            verticalAlign: 'top'
+        },
+        series: [{
+            name: 'Wins',
+            data: [{
+                name: 'Top Six',
+                y: 129,
+                color: '#ffcccb',
+                legendIndex: 1
+            }, {
+                name: 'Rest of Teams',
+                y: 158,
+                color: '#add8e6',
+            }]
+        }]
     });
 }
 
@@ -48,13 +48,42 @@ function simplePlot2() {
             marginTop: 100
         },
         title: {
-            text: 'Comparison of League Standings to Bet Winnings Standings'
+            text: 'Comparison of League Standings to Bet Winnings Standings<br>For The 2014-15 Premier League Season'
         },
         legend: {
             enabled: false
         },
         tooltip: {
-            enabled: false
+            formatter: function () {
+                if (this.x == 'Bet Standings') {
+                    d = {
+                        20: '$230.40',
+                        19: '$228.20',
+                        18: '$148.40',
+                        17: '$54.80',
+                        16: '$54.30',
+                        15: '$31.40',
+                        14: '$6.10',
+                        13: '$2.90',
+                        12: '-$4.60',
+                        11: '-$11.30',
+                        10: '-$11.80',
+                        9: '-$41.30',
+                        8: '-$42.40',
+                        7: '-$52.60',
+                        6: '-$58.60',
+                        5: '-$63.00',
+                        4: '-$116.30',
+                        3: '-$122.40',
+                        2: '-$137.00',
+                        1: '-$142.40'
+                    }
+                    return 'Profit: ' + d[this.y];
+                } else {
+                    d = { 1: 20, 2: 19, 3: 18, 4: 17, 5: 16, 6: 15, 7: 14, 8: 13, 9: 12, 10: 11, 11: 10, 12: 9, 13: 8, 14: 7, 15: 6, 16: 5, 17: 4, 18: 3, 19: 2, 20: 1 }
+                    return "League Position: " + d[this.y];
+                }
+            }
         },
         xAxis: {
             opposite: true,
@@ -207,22 +236,25 @@ function simplePlot2() {
 function simplePlot3() {
     Highcharts.chart('container3', {
         title: {
-            text: 'Solar Employment Growth by Sector, 2010-2016'
+            text: 'Comparison of Decimal Odds: Chelsea vs. Swansea'
         },
 
         subtitle: {
-            text: 'Source: thesolarfoundation.com'
+            text: '2014-15 Premier League Season'
         },
 
         yAxis: {
             title: {
-                text: 'Number of Employees'
+                text: 'Decimal Odds For Matchday'
             }
         },
 
         xAxis: {
             accessibility: {
                 rangeDescription: 'Range: 2010 to 2017'
+            },
+            title: {
+                text: 'Matchday'
             }
         },
 
