@@ -59,12 +59,14 @@ ul {
 }
 
 .float-container {
-    border: 3px solid #fff;
+    border: 3px solid black;
     padding: 20px;
+    text-align: center;
+    margin-top: 5%;
 }
 
 .float-child {
-    margin-top: 5%;
+    margin-top: 1%;
     width: 44%;
     float: left;
     padding: 20px;
