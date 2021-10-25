@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <style>
+        body {
+            background-color: gray;
+            margin: 0;
+        }
+
+        div {
+            border-radius: 5px;
+            margin: auto;
+        }
+
+        #header {
+            z-index: 1;
+            position: fixed;
+            height: 5%;
+            /* width: 100%; */
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+
+        #footer {
+            background-color: #BABAD1;
+            height: 100px;
+            clear: both;
+            width: 80em;
+        }
+
+        .left {
+            background-color: #F0F5FF;
+            height: 0%;
+            /* width: 80em; */
+            max-width: 77%;
+            margin: auto;
+            margin-top: 8%;
+        }
+
+        .right {
+            background-color: #F0F5FF;
+            height: 500px;
+            width: 80em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <ul>
+            <li><a class="active" href="./index.html">Home</a></li>
+            <li><a href="./about.html">About Me</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./test.html">Test</a></li>
+          </ul>
+    </div>
+    <div class="left">
+        <h1>This is where we are going to put stuff!</h1>
+        <h2>This should also be centered</h2>
+    </div>
+    <div class="right">This is right</div>
+    <div id="footer">This is the footer</div>
+</body>
+
+</html>
