@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
-    <script src="scripts/main.js"></script>
+    <!-- <script src="scripts/main.js"></script> -->
     <title> Aurelio Barrios Personal</title>
 
     <style>
@@ -23,6 +23,7 @@
         body {
             /* This made sure that the body filled the entire page rather than having gaps */
             margin: 0;
+            background: green;
         }
 
         .header {
@@ -57,18 +58,30 @@
             color: black;
         }
 
-        .column {
-            background-color: violet;
-            /* rather than top and bottom they are now next to each other */
+        .leftcolumn {
+            /* This moved everything from left column to left and right to right */
             float: left;
-            /* there is some space between them now */
-            width: 33.33%;
-            /*  */
-            padding: 15px;
+            width: 75%;
+            background-color: red;
         }
 
-        .row {
-            background-color: tomato;
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: blue;
+            padding-left: 20px;
+        }
+
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
         }
 
         .row:after {
@@ -78,8 +91,18 @@
         }
 
         /* adds a responsive layout */
-        @media screen and (max-width:600px) {
-            .column {
+        @media screen and (max-width:800px) {
+
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
                 width: 100%;
             }
         }
@@ -96,22 +119,49 @@
     <div class="topnav">
         <a href="./index.html">Home</a>
         <a href="./portfolio.html">Portfolio</a>
+        <a href="./resume/resume.pdf" style="float: right;">Resume</a>
     </div>
 
     <div class="row">
-        <div class="column">
-            <h2>About Me</h2>
-            <p>Some wording here the words are here. Idk why but the words are here</p>
-        </div>
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>TITLE HEADING</h2>
+                <h5>Title description, Dec 7, 2017</h5>
+                <div class="fakeimg" style="height: 200px;">Image</div>
+                <p>Some text..</p>
+                <p>Insert paragraph here</p>
+            </div>
 
-        <div class="column">
-            <h2>Skills & Education</h2>
-            <p>Some wording here the words are here. Idk why but the words are here</p>
+            <div class="card">
+                <h2>TITLE HEADING</h2>
+                <h5>Title description, Dec 7, 2017</h5>
+                <div class="fakeimg" style="height: 200px;">Image</div>
+                <p>Some text..</p>
+                <p>Insert paragraph here</p>
+            </div>
         </div>
-
-        <div class="column">
-            <h2>Skills & Education</h2>
-            <p>Some wording here the words are here. Idk why but the words are here</p>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="fakeimg" style="height: 100px;">Image</div>
+                <p>Something here</p>
+            </div>
+            <div class="card">
+                <h3>Popular post</h3>
+                <div class="fakeimg">
+                    <p>Image</p>
+                </div>
+                <div class="fakeimg">
+                    <p>Image</p>
+                </div>
+                <div class="fakeimg">
+                    <p>Image</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Follow Me</h3>
+                <p>Some text</p>
+            </div>
         </div>
     </div>
 
