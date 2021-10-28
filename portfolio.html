@@ -70,6 +70,7 @@
             width: 25%;
             background-color: blue;
             padding-left: 20px;
+            padding-right: 20px;
         }
 
         .fakeimg {
@@ -89,6 +90,17 @@
             display: table;
             clear: both;
         }
+
+        #rcorners3 {
+            background-color: violet;
+            border-radius: 15px;
+        }
+
+        #rcorners4 {
+            background-color: violet;
+            border-radius: 15px 50px;
+        }
+
 
         /* adds a responsive layout */
         @media screen and (max-width:800px) {
@@ -124,7 +136,7 @@
 
     <div class="row">
         <div class="leftcolumn">
-            <div class="card">
+            <div id="rcorners4" class="card">
                 <h2>TITLE HEADING</h2>
                 <h5>Title description, Dec 7, 2017</h5>
                 <div class="fakeimg" style="height: 200px;">Image</div>
@@ -132,7 +144,7 @@
                 <p>Insert paragraph here</p>
             </div>
 
-            <div class="card">
+            <div id="rcorners4" class="card">
                 <h2>TITLE HEADING</h2>
                 <h5>Title description, Dec 7, 2017</h5>
                 <div class="fakeimg" style="height: 200px;">Image</div>
@@ -141,12 +153,12 @@
             </div>
         </div>
         <div class="rightcolumn">
-            <div class="card">
+            <div id="rcorners3" class="card">
                 <h2>About Me</h2>
                 <div class="fakeimg" style="height: 100px;">Image</div>
                 <p>Something here</p>
             </div>
-            <div class="card">
+            <div id="rcorners3" class="card">
                 <h3>Popular post</h3>
                 <div class="fakeimg">
                     <p>Image</p>
@@ -158,7 +170,7 @@
                     <p>Image</p>
                 </div>
             </div>
-            <div class="card">
+            <div id="rcorners3" class="card">
                 <h3>Follow Me</h3>
                 <p>Some text</p>
             </div>
