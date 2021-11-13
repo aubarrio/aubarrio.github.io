@@ -22,7 +22,8 @@
         body {
             /* This made sure that the body filled the entire page rather than having gaps */
             margin: 0;
-            background: #34568B;
+            /* background: #34568B; */
+            background: #424242;
         }
 
         .header {
@@ -97,20 +98,14 @@
         }
 
         #rcorners4 {
-            background-color: #f1f1f1;
+            background-color: #EEEEEE;
             border-radius: 15px 50px;
         }
 
-        /* TEST */
-        div.imgone {
-            background-image: url("./images/fairlearn.jpg");
-            height: 262px;
-            width: auto;
-            max-width: 100%;
-            margin: auto;
+        .topics {
+            color: #808080;
+            text-align: center;
         }
-        /* TEST */
-
 
         /* adds a responsive layout */
         @media screen and (max-width:800px) {
@@ -127,13 +122,6 @@
                 float: none;
                 width: 100%;
             }
-
-            /* TEST */
-            div.imageone {
-                background-image: url("./images/fairlearn_mobile.jpg");
-                margin: auto;
-            }
-            /* TEST */
         }
     </style>
 </head>
@@ -157,14 +145,15 @@
                 <h2>Building A Fair ML Model Using Fairlearn For Loan Acceptance Prediction</h2>
                 <h4>Maintaining Accuracy While Providing Fairness In Loan Acceptance For Sensitive Attributes 
                     Like Race & Sex - June 12, 2021</h4>
-                <div class="imgone"></div>
+                <!-- <div class="imgone"></div> -->
                 <p>Ensuring machine learning models are fair should be a main priority by those implementing 
                     them, but it is often overlooked. This project aims to solve that problem by showing 
                     how a machine learning model can be both accurate and fair. This project equalizes 
                     loan selection rates across different races whilst also maintaining accuracy in its 
                     loan predictions using HMDA California 2017 data.</p>
-                    <p>&bull; pandas &bull; fairlearn package &bull; ML model &bull; Ethical ML model building &bull; Data wrangling</p>
-                <a href="https://github.com/aubarrio/MyPortfolio/tree/main/Fairlearn" target="_blank">GitHub Repository</a>
+                    <a href="https://github.com/aubarrio/MyPortfolio/tree/main/Fairlearn" target="_blank">GitHub Repository</a>
+                <hr>
+                <p class="topics">&#9745; pandas &#9745; fairlearn package &#9745; ML model &#9745; Ethical ML model building &#9745; Data wrangling</p>
             </div>
 
             <div id="rcorners4" class="card">
