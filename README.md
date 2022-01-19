@@ -1,4 +1,3 @@
 # aubarrio.github.io
-Personal website showcasing my portfolio, previous projects and a little more about me. 
 
-Explain here
+Personal website showcasing my portfolio, previous projects and a little more about me. 
