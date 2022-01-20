@@ -86,6 +86,12 @@
             display: table;
             clear: both;
         }
+        /* TEST */
+        #skills {
+            float: left;
+            width: 33%;
+        }
+        /* TEST */
 
         /* adds a responsive layout */
         @media screen and (max-width:600px) {
@@ -99,6 +105,13 @@
                 float: none;
                 width: 100%;
             }
+
+            /* TEST */
+            #skills {
+                float: none;
+                width: 100%;
+            }
+            /* TEST */
         }
     </style>
 </head>
@@ -164,7 +177,7 @@
                 <a style="text-decoration: none;" href="https://www.linkedin.com/in/aurelio-barrios/"
                     target="_blank">LinkedIn Page</a>. Here are some of my skills, not in any particular order.
             </p>
-            <div style="float: left; width: 33%;">
+            <div id="skills">
                 <p>Programming Languages</p>
                 <ul>
                     <li>Python</li>
@@ -180,7 +193,7 @@
                     <li>CSS</li>
                 </ul>
             </div>
-            <div style="float: left; width: 33%;">
+            <div id="skills">
                 <p>Technologies</p>
                 <ul>
                     <li>AWS</li>
@@ -196,7 +209,7 @@
                     <li>MySQL</li>
                 </ul>
             </div>
-            <div style="float: left;">
+            <div id="skills">
                 <p>Python Packages</p>
                 <ul>
                     <li>Pandas</li>
